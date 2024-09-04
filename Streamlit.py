@@ -3,13 +3,12 @@ import streamlit as st
 from PIL import Image
 
 # Load the pre-trained sentiment analysis model, CountVectorizer, and LabelEncoder using joblib
-model = joblib.load(r'C:\Users\New\Desktop\Moi\MSc\Electives\DAT 620 (BLOCKCHAIN, WEB AND MOBILE TECHNOLOGY)\DAT 620 CA1\sgd_model.pkl')
-vectorizer = joblib.load(r'C:\Users\New\Desktop\Moi\MSc\Electives\DAT 620 (BLOCKCHAIN, WEB AND MOBILE TECHNOLOGY)\DAT 620 CA1\count_vectorizer.pkl')
-label_encoder = joblib.load(r'C:\Users\New\Desktop\Moi\MSc\Electives\DAT 620 (BLOCKCHAIN, WEB AND MOBILE TECHNOLOGY)\DAT 620 CA1\label_encoder.pkl')
+model = joblib.load('sgd_model.pkl')
+vectorizer = joblib.load('count_vectorizer.pkl')
+label_encoder = joblib.load('label_encoder.pkl')
 
 # Load and display an image (optional)
-image_path = r'C:\Users\New\Desktop\Moi\MSc\Electives\DAT 620 (BLOCKCHAIN, WEB AND MOBILE TECHNOLOGY)\DAT 620 CA1\Sentiment.jpg'
-image = Image.open(image_path)
+image = Image.open('Sentiment.jpg')
 
 # Display image centered
 st.image(image, width=400, caption='Sentiment Analysis')  # Adjust the width as needed
